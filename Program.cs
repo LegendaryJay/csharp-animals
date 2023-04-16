@@ -1,4 +1,7 @@
-﻿namespace csharp_animals
+﻿using System;
+using System.Collections.Generic;
+
+namespace csharp_animals
 {
     internal class Program
     {
@@ -6,12 +9,8 @@
 
         private static void Main()
         {
-            var zoo = new List<ITalkable>
-            {
-                new Dog(true, "Bean"),
-                new Cat(9, "Charlie"),
-                new Teacher(44, "Stacy Read")
-            };
+            var zoo = new List<ITalkable>();
+            AnimalCreator.CreateAnimals(zoo);
 
             using (var outputFile = new FileOutput(FileName))
             {

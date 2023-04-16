@@ -22,10 +22,7 @@
         {
             try
             {
-                if (_out != null)
-                {
-                    _out.WriteLine(line);
-                }
+                _out?.WriteLine(line);
             }
             catch (Exception e)
             {
